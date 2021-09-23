@@ -25,7 +25,7 @@
 class BasePlugin : public QObject, PluginInterface
 {
     Q_OBJECT
-    Q_PLUGIN_METADATA(IID "fr.swiftapp.linux.plugin.BasePlugin" FILE "res/baseplugin.json")
+    Q_PLUGIN_METADATA(IID "fr.swiftapp.swiftyassistant.plugin" FILE "res/baseplugin.json")
     Q_INTERFACES(PluginInterface)
 
 public:
