@@ -20,6 +20,8 @@
 #include <QFile>
 #include <QLocale>
 
+#define PLUGIN_ID "fr.swifty.baseplugin"
+
 /**
  * Return the keywords with the answers that match in xml format
  *
@@ -44,7 +46,7 @@ QString BasePlugin::getDataXml()
  */
 QString BasePlugin::pluginId()
 {
-    return "fr.swifty.baseplugin";
+    return PLUGIN_ID;
 }
 
 /**
@@ -71,4 +73,9 @@ void BasePlugin::execAction(QList<QString>) {}
 /**
  * Called when a custom interface is displayed and sends a message
  */
-void BasePlugin::messageReceived(QString, QString) {}
+void BasePlugin::messageReceived(QString, QString id)
+{
+    if (id == PLUGIN_ID) {
+        // Insert here the code
+    }
+}
